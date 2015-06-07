@@ -46,7 +46,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if zooming {
-            println("hold it, zooming")
             return
         }
         var alpha = 1 - (abs(scrollView.contentOffset.y) / scrollView.frame.height) * 2
@@ -73,10 +72,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         // This method is called when the scrollview finally stops scrolling.
-        UIView.animateWithDuration(0.1){
-            self.photoActions.alpha = 1
-            self.doneButton.alpha = 1
-        }
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
@@ -85,6 +80,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewWillBeginZooming(scrollView: UIScrollView,
         withView view: UIView!){
+            hideUI()
             self.zooming = true
             
     }
@@ -92,10 +88,24 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         withView view: UIView!,
         atScale scale: CGFloat){
             if(scale == 1.0){
+                showUI()
                 self.zooming = false
                 scrollView.contentSize = CGSizeMake(self.view.frame.size.width + 1, self.view.frame.size.height + 1)
             }
-            
+    }
+    
+    func hideUI(){
+        UIView.animateWithDuration(0.1){
+            self.photoActions.alpha = 0
+            self.doneButton.alpha = 0
+        }
+    }
+    
+    func showUI(){
+        UIView.animateWithDuration(0.1){
+            self.photoActions.alpha = 1
+            self.doneButton.alpha = 1
+        }
     }
     
     
