@@ -13,6 +13,12 @@
 		048129D31AFB0A550087A99B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048129D21AFB0A550087A99B /* Images.xcassets */; };
 		048129D61AFB0A550087A99B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048129D41AFB0A550087A99B /* LaunchScreen.xib */; };
 		048129E21AFB0A550087A99B /* Facebook_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048129E11AFB0A550087A99B /* Facebook_ChallengeTests.swift */; };
+		048129EC1AFB0D7C0087A99B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048129EB1AFB0D7C0087A99B /* FeedViewController.swift */; };
+		048129EE1AFB10C10087A99B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048129ED1AFB10C10087A99B /* DetailViewController.swift */; };
+		048129F01AFB1BE50087A99B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048129EF1AFB1BE50087A99B /* StatusViewController.swift */; };
+		04F050731B227BF50090D985 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F050711B227BF50090D985 /* BaseTransition.swift */; };
+		04F050741B227BF50090D985 /* GrowTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F050721B227BF50090D985 /* GrowTransition.swift */; };
+		04F050761B227C2F0090D985 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F050751B227C2F0090D985 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		048129DB1AFB0A550087A99B /* Facebook ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Facebook ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048129E01AFB0A550087A99B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048129E11AFB0A550087A99B /* Facebook_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook_ChallengeTests.swift; sourceTree = "<group>"; };
+		048129EB1AFB0D7C0087A99B /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		048129ED1AFB10C10087A99B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		048129EF1AFB1BE50087A99B /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewController.swift; path = ../StatusViewController.swift; sourceTree = "<group>"; };
+		04F050711B227BF50090D985 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		04F050721B227BF50090D985 /* GrowTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrowTransition.swift; sourceTree = "<group>"; };
+		04F050751B227C2F0090D985 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +89,18 @@
 		048129C81AFB0A550087A99B /* Facebook Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				048129EF1AFB1BE50087A99B /* StatusViewController.swift */,
 				048129CB1AFB0A550087A99B /* AppDelegate.swift */,
 				048129CD1AFB0A550087A99B /* ViewController.swift */,
 				048129CF1AFB0A550087A99B /* Main.storyboard */,
+				04F050751B227C2F0090D985 /* PhotoViewController.swift */,
+				04F050711B227BF50090D985 /* BaseTransition.swift */,
+				04F050721B227BF50090D985 /* GrowTransition.swift */,
 				048129D21AFB0A550087A99B /* Images.xcassets */,
 				048129D41AFB0A550087A99B /* LaunchScreen.xib */,
 				048129C91AFB0A550087A99B /* Supporting Files */,
+				048129EB1AFB0D7C0087A99B /* FeedViewController.swift */,
+				048129ED1AFB10C10087A99B /* DetailViewController.swift */,
 			);
 			path = "Facebook Challenge";
 			sourceTree = "<group>";
@@ -213,7 +231,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				048129CE1AFB0A550087A99B /* ViewController.swift in Sources */,
+				04F050731B227BF50090D985 /* BaseTransition.swift in Sources */,
+				048129EC1AFB0D7C0087A99B /* FeedViewController.swift in Sources */,
 				048129CC1AFB0A550087A99B /* AppDelegate.swift in Sources */,
+				048129EE1AFB10C10087A99B /* DetailViewController.swift in Sources */,
+				04F050761B227C2F0090D985 /* PhotoViewController.swift in Sources */,
+				048129F01AFB1BE50087A99B /* StatusViewController.swift in Sources */,
+				04F050741B227BF50090D985 /* GrowTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +429,7 @@
 				048129E71AFB0A550087A99B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		048129E81AFB0A550087A99B /* Build configuration list for PBXNativeTarget "Facebook ChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +438,7 @@
 				048129EA1AFB0A550087A99B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
